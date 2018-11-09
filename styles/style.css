@@ -1,0 +1,157 @@
+#menu {
+  display:block;
+  margin: auto;
+}
+
+ul {
+  display: block;
+  margin: auto;
+  height: 50px;
+  width: 615px;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.liste {
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  background-color: #d2d2d2;
+  color: cadetblue;
+  border-radius: 30px;
+  font-family: menu;
+  width: 120px;
+  height: 40px;
+  margin-right: 30px;
+}
+
+.liste:hover {
+  animation-duration: 5.6s;
+  animation-name: animationBouttons;
+  background-color: #bebcbc;
+}
+
+.liste:active {
+  background-color: darkgray;
+  animation-duration: 0.1s;
+  animation-name: animationClick;
+}
+
+header {
+  display: block;
+  margin:auto;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  font-size: 70px;
+  font-family: titregoogle;
+  animation-duration: 3.5s;
+  animation-name: animationTitre;
+}
+
+@font-face {
+  font-family: 'titre';
+  src: url(../font/googlebold.ttf);
+}
+@font-face {
+  font-family: 'titregoogle';
+  src: url(../font/notoregu.ttf);
+}
+@font-face {
+  font-family: 'menu';
+  src: url(../font/google.ttf);
+}
+@font-face {
+  font-family: 'classico';
+  src: url(../font/comfortaaRegular.ttf);
+}
+
+
+@keyframes animationBouttons {
+  0% {
+    background-color: #d2d2d2;
+  }
+
+  7% {
+    background-color: #bebcbc;
+  }
+  20% {
+    background-color: #bebcbc;
+  }
+}
+
+@keyframes animationClick {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+
+
+section{
+  display: none;
+  width: 800px;
+  height: auto;
+  background-color: none;
+  margin: auto;
+}
+
+#sectionAc{
+  display: block;
+}
+
+html, body {
+  background-image:radial-gradient(#ffffff, #383838);
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.animTitre {
+  height: 110px;
+  margin: 0 auto;
+  width: 320px;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #19f6e8;
+}
+
+.text {
+  color: #fff;
+  font-family: 'titre';
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -90px;
+}
+
+@keyframes flouche {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 9px;
+  }
+  100% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 720;
+    stroke-width: 16px;
+    stroke: #63ff5e;
+  }
+}
+
+.animTitre:hover .shape {
+  animation: 0.4s flouche linear forwards;
+}
